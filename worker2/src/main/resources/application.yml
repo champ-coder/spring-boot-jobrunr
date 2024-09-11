@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: worker2
+  data:
+    mongo:
+      host: ${MONGODB_HOST:localhost}
+      port: ${MONGODB_PORT:27017}
+      database: ${MONGODB_SCHEDULER_DATABASE:jobrunr}
+
+server:
+  port: 8082
+
+org:
+  jobrunr:
+    background-job-server:  # If This property is enabled then only jobRunr will act as a cluster. (And we've to give this property in all the worker nodes)
+      enabled: true

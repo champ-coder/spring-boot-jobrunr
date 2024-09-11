@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: leader
+  data:
+    mongo:
+      host: ${MONGODB_HOST:localhost}
+      port: ${MONGODB_PORT:27017}
+      database: ${MONGODB_SCHEDULER_DATABASE:jobrunr}
+
+org:
+  jobrunr:
+    dashboard:
+      enabled: true
+      port: 8000
